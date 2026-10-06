@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clasificador de objetos</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+
+</head>
+
+<body>
+    <h1 class="Titulo">Clasificador de objetos</h1>
+    <p class="Eslogan"> Página creada con un modelo de Teachable Machine</p>
+
+
+    <!-- FILA 1 -->
+
+    <div class="fila">
+
+        <div class="caja">
+            <h2>Cámara</h2>
+            <button onclick="iniciarCamara()">
+                Iniciar cámara
+            </button>
+            <button onclick="pararCamara()">
+                Parar cámara
+            </button>
+            <div id="camara"></div>
+        </div>
+
+        <div class="caja">
+            <h2>Porcentaje mínimo</h2>
+            <p>
+                Selecciona el porcentaje mínimo
+                para aceptar un resultado
+            </p>
+            <input type="range" id="porcentaje" min="50" max="100" value="80" oninput="cambiarPorcentaje()">
+            <p>
+                Porcentaje mínimo:
+                <span id="numeroPorcentaje">80</span>%
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- FILA 2 -->
+
+    <div class="fila">
+
+        <div class="caja">
+            <h2>Resultado</h2>
+            <p id="resultado">
+                Todavía no hay ningún resultado
+            </p>
+        </div>
+
+        <div class="caja">
+            <h2>Subir imagen</h2>
+            <input type="file" id="imagen" accept="image/*" onchange="subirImagen()">
+            <br><br>
+            <img id="imagenSubida">
+        </div>
+
+    </div>
+
+    <!-- HISTORIAL ABAJO -->
+
+    <div class="caja historialGrande">
+
+        <h2>Historial</h2>
+
+        <button onclick="borrarHistorial()">
+            Borrar historial
+        </button>
+
+        <div id="historial"></div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+body {
+    font-family: Arial;
+    background-color: #eeeeee;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.Titulo{
+    color:pink;
+}
+
+.Eslogan{
+   color:pink;
+   font-size: bold;
+}
+
+/* Filas */
+
+.fila {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Cajas */
+
+.caja {
+    background-color: white;
+    width: 50%;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* Historial ocupa toda la fila */
+
+.historialGrande {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+/* Botones */
+
+button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Cámara */
+
+#camara {
+    margin-top: 20px;
+}
+
+#camara canvas {
+    max-width: 100%;
+}
+
+/* Porcentaje */
+#porcentaje {
+    width: 80%;
+}
+
+/* Resultado */
+#resultado {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Imagen subida */
+
+#imagenSubida {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+/* Resultados guardados */
+
+.resultadoHistorial {
+    background-color: #eeeeee;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* Para móviles */
+@media (max-width: 600px) {
+    body {
+        padding: 5px;
+    }
+
+    .fila {
+        display: block;
+        width: 100%;
+    }
+
+    .caja {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .historialGrande {
+        width: 90%;
+    }
+
+    button {
+        width: 90%;
+    }
+
+    #imagenSubida {
+        max-width: 90%;
+    }
+}
